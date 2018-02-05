@@ -15,26 +15,37 @@ namespace BilletSystem.Tests
         public void PrisTest()
         {
             //arrange
-            var Bil = new Bil();
+            var Bil = new Bil("3020129", DateTime.Now);
 
             //act
-            int Pris = Bil.Pris();
+            int Pris = Bil.pris();
 
             //assert
-            Assert.AreEqual(25, Pris);
+            Assert.AreEqual(240, Pris);
         }
 
         [TestMethod()]
         public void KøretøjTest()
         {
             //arrange
-            var Bil = new Bil();
+            var Bil = new Bil("3020129",DateTime.Now);
 
             //act
-            string Køretøj = Bil.Køretøj();
+            string Køretøj = Bil.navngivelseAfKøretøj();
 
             //assert
             Assert.AreEqual("Bil", Køretøj);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException),
+            "Nummerplade er længere end 7 cifre")]
+        public void BilNummerpladeForLang()
+        {
+            //arrange 
+            var Bil = new Bil("12312322", DateTime.Now);
+
+
         }
     }
 }

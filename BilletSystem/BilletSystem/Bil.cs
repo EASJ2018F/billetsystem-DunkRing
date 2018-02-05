@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace BilletSystem
 {
-    public class Bil
+    public class Bil : Køretøjerbaseklasse
     {
-        public int Pris()
+        public Bil(string NummerPlade, DateTime dato) : base(NummerPlade, dato)
+        {
+
+        }
+
+        public override int pris()
         {
             return 240;
         }
 
-        public string Køretøj()
+        public override string navngivelseAfKøretøj()
         {
             return "Bil";
         }
-        public string Nummerplade { get; set; }
-        public DateTime Dato { get; set; }
-
     }
 }
