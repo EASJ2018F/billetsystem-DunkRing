@@ -28,7 +28,7 @@ namespace BilletSystem.Tests
         public void KøretøjTest()
         {
             //arrange
-            var Bil = new Bil("3020129",DateTime.Now);
+            var Bil = new Bil("3020129",DateTime.Now, true);
 
             //act
             string Køretøj = Bil.navngivelseAfKøretøj();
@@ -43,7 +43,7 @@ namespace BilletSystem.Tests
         public void BilNummerpladeForLang()
         {
             //arrange 
-            var Bil = new Bil("12312322", DateTime.Now);
+            var Bil = new Bil("12312322", DateTime.Now, true);
 
 
         }

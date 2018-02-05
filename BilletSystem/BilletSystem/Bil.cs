@@ -8,7 +8,7 @@ namespace BilletSystem
 {
     public class Bil : Køretøjerbaseklasse
     {
-        public Bil(string NummerPlade, DateTime dato) : base(NummerPlade, dato)
+        public Bil(string NummerPlade, DateTime dato, bool brobizz) : base(NummerPlade, dato, brobizz)
         {
 
         }
